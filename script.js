@@ -1,4 +1,4 @@
-// Utility function for debouncing
+// Utility Functions
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -23,12 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const bgAudio = document.getElementById('bg-audio');
   const scrollUpBtn = document.getElementById('scroll-up');
   const sections = document.querySelectorAll('section[id]');
-  const galleryImages = document.querySelectorAll('.gallery__image img');
 
-  // Create menu overlay
-  const overlay = document.createElement('div');
-  overlay.className = 'menu-overlay';
-  document.body.appendChild(overlay);
+  // Create menu overlay if it doesn't exist
+  let menuOverlay = document.querySelector('.menu-overlay');
+  if (!menuOverlay) {
+      menuOverlay = document.createElement('div');
+      menuOverlay.className = 'menu-overlay';
+      document.body.appendChild(menuOverlay);
+  }
 
   // Preloader Handler
   const hidePreloader = () => {
@@ -53,13 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mobile Menu Handlers
   const toggleMenu = (show) => {
-      if (navMenu) {
-          navMenu.classList[show ? 'add' : 'remove']('show-menu');
-          overlay.classList[show ? 'add' : 'remove']('active');
-          document.body.style.overflow = show ? 'hidden' : '';
-      }
+      if (!navMenu) return;
+      
+      navMenu.classList[show ? 'add' : 'remove']('show-menu');
+      menuOverlay.classList[show ? 'add' : 'remove']('active');
+      document.body.style.overflow = show ? 'hidden' : '';
   };
 
+  // Initialize Mobile Menu
   const initMobileMenu = () => {
       if (!navMenu || !navToggle || !navClose) return;
 
@@ -68,11 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Hide menu
       navClose.addEventListener('click', () => toggleMenu(false));
-      overlay.addEventListener('click', () => toggleMenu(false));
+      menuOverlay.addEventListener('click', () => toggleMenu(false));
 
       // Close menu when clicking links
       navLinks.forEach(link => {
-          link.addEventListener('click', () => {
+          link.addEventListener('click', (e) => {
+              e.preventDefault();
               toggleMenu(false);
               
               // Smooth scroll to section
@@ -92,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Close menu on resize
       window.addEventListener('resize', () => {
-          if (window.innerWidth > 768) {
+          if (window.innerWidth > 768 && navMenu.classList.contains('show-menu')) {
               toggleMenu(false);
           }
       });
@@ -105,15 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       sections.forEach(section => {
           const sectionTop = section.offsetTop - headerHeight - 20;
-          const sectionBottom = sectionTop + section.offsetHeight;
+          const sectionHeight = section.offsetHeight;
           const sectionId = section.getAttribute('id');
           const navLink = document.querySelector(`.nav__link[href*="#${sectionId}"]`);
 
-          if (scrollY >= sectionTop && scrollY < sectionBottom) {
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
               navLinks.forEach(link => link.classList.remove('active-link'));
-              if (navLink) {
-                  navLink.classList.add('active-link');
-              }
+              navLink?.classList.add('active-link');
           }
       });
   };
@@ -129,29 +131,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   };
 
-  if (scrollUpBtn) {
-      scrollUpBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-          });
+  // Scroll to top handler
+  scrollUpBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
       });
-  }
+  });
 
-  // Smooth scroll for all anchor links
+  // Initialize all smooth scrolling
   const initSmoothScroll = () => {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.addEventListener('click', function(e) {
-              e.preventDefault();
-              const targetId = this.getAttribute('href');
+              if (this.getAttribute('href') === '#') return;
               
-              if (targetId === '#') return;
-
-              const targetElement = document.querySelector(targetId);
-              if (targetElement) {
+              e.preventDefault();
+              const target = document.querySelector(this.getAttribute('href'));
+              
+              if (target) {
                   const headerOffset = header.offsetHeight;
-                  const elementPosition = targetElement.offsetTop;
+                  const elementPosition = target.offsetTop;
                   const offsetPosition = elementPosition - headerOffset;
 
                   window.scrollTo({
@@ -191,13 +191,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       audioToggle.addEventListener('click', toggleAudio);
 
-      // Auto-play handling
+      // Auto-play handling with user interaction notification
       bgAudio.play().catch(() => {
           console.log("Autoplay prevented. User interaction needed.");
           createAudioNotification();
       });
   };
 
+  // Audio notification handler
   const createAudioNotification = () => {
       const notification = document.createElement('div');
       notification.id = 'audio-notification';
@@ -236,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Swiper
   const initSwiper = () => {
       if (typeof Swiper !== 'undefined') {
-          const gallerySwiper = new Swiper('.gallery-swiper', {
+          new Swiper('.gallery-swiper', {
               effect: 'coverflow',
               grabCursor: true,
               centeredSlides: true,
@@ -301,16 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
       parallaxHearts(); // Initial call
   };
 
-  // Image loading error handler
-  const initImageErrorHandling = () => {
-      galleryImages.forEach(img => {
-          img.onerror = function() {
-              this.src = 'path/to/fallback-image.jpg';
-              this.alt = 'Image not available';
-          };
-      });
-  };
-
   // Event Listeners with debouncing
   const handleScroll = debounce(() => {
       scrollHeader();
@@ -329,7 +320,6 @@ document.addEventListener('DOMContentLoaded', () => {
       initAOS();
       initSwiper();
       initParallax();
-      initImageErrorHandling();
       
       // Initial calls
       activeLink();

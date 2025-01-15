@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A special birthday celebration website" />
     <title>Happy Birthday My Love! ♥</title>
+    
     <!-- Preload critical assets -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" />
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style" />
@@ -69,6 +70,9 @@
         </nav>
     </header>
 
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+
     <!-- Main Content -->
     <main class="main">
         <!-- Home Section -->
@@ -77,7 +81,7 @@
                 <div class="home__content">
                     <div class="home__data" data-aos="fade-up">
                         <h1 class="home__title">
-                            Happy Birthday Ayu Kusuma Dewi
+                            Happy Birthday
                             <span class="gradient-text">My Love!</span>
                         </h1>
                         <p class="home__description">
@@ -150,124 +154,124 @@
             </div>
         </section>
 
-<!-- Gallery Section -->
-<section class="gallery section" id="gallery">
-  <div class="gallery__container container">
-      <div class="section__titles" data-aos="fade-down">
-          <span class="section__subtitle">Memories</span>
-          <h2 class="section__title">Momen Indah Kita</h2>
-      </div>
+        <!-- Gallery Section -->
+        <section class="gallery section" id="gallery">
+            <div class="gallery__container container">
+                <div class="section__titles" data-aos="fade-down">
+                    <span class="section__subtitle">Memories</span>
+                    <h2 class="section__title">Momen Indah Kita</h2>
+                </div>
 
-      <div class="gallery__content">
-          <div class="swiper gallery-swiper">
-              <div class="swiper-wrapper">
-                  <!-- Foto 1 -->
-                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
-                      <figure class="gallery__image">
-                          <img src="images/foto1.jpg" 
-                               alt="Pertemuan yang mengubah segalanya"
-                               loading="lazy"
-                               width="800"
-                               height="1067" />
-                      </figure>
-                      <div class="gallery__data">
-                          <figcaption class="gallery__title">Saat Hati Memilih</figcaption>
-                          <p class="gallery__description">
-                              Setiap pandangan mata menguatkan keyakinan bahwa kamu adalah jawaban dari doaku
-                          </p>
-                      </div>
-                  </div>
+                <div class="gallery__content">
+                    <div class="swiper gallery-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Foto 1 -->
+                            <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                                <figure class="gallery__image">
+                                    <img src="images/foto1.jpg" 
+                                         alt="Pertemuan yang mengubah segalanya"
+                                         loading="lazy"
+                                         width="800"
+                                         height="1067" />
+                                </figure>
+                                <div class="gallery__data">
+                                    <figcaption class="gallery__title">Saat Hati Memilih</figcaption>
+                                    <p class="gallery__description">
+                                        Setiap pandangan mata menguatkan keyakinan bahwa kamu adalah jawaban dari doaku
+                                    </p>
+                                </div>
+                            </div>
 
-                  <!-- Foto 2 -->
-                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
-                      <figure class="gallery__image">
-                          <img src="images/foto2.jpg" 
-                               alt="Kenangan manis kita"
-                               loading="lazy"
-                               width="800"
-                               height="1067" />
-                      </figure>
-                      <div class="gallery__data">
-                          <figcaption class="gallery__title">Indahnya Bersamamu</figcaption>
-                          <p class="gallery__description">
-                              Berjalan di sampingmu membuat setiap langkah terasa lebih berarti
-                          </p>
-                      </div>
-                  </div>
+                            <!-- Foto 2 -->
+                            <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                                <figure class="gallery__image">
+                                    <img src="images/foto2.jpg" 
+                                         alt="Kenangan manis kita"
+                                         loading="lazy"
+                                         width="800"
+                                         height="1067" />
+                                </figure>
+                                <div class="gallery__data">
+                                    <figcaption class="gallery__title">Indahnya Bersamamu</figcaption>
+                                    <p class="gallery__description">
+                                        Berjalan di sampingmu membuat setiap langkah terasa lebih berarti
+                                    </p>
+                                </div>
+                            </div>
 
-                  <!-- Foto 3 -->
-                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
-                      <figure class="gallery__image">
-                          <img src="images/foto3.jpg" 
-                               alt="Momen penuh arti"
-                               loading="lazy"
-                               width="800"
-                               height="1067" />
-                      </figure>
-                      <div class="gallery__data">
-                          <figcaption class="gallery__title">Cerita Kita</figcaption>
-                          <p class="gallery__description">
-                              Setiap detik bersamamu seperti halaman indah yang tak ingin kulewatkan
-                          </p>
-                      </div>
-                  </div>
+                            <!-- Foto 3 -->
+                            <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                                <figure class="gallery__image">
+                                    <img src="images/foto3.jpg" 
+                                         alt="Momen penuh arti"
+                                         loading="lazy"
+                                         width="800"
+                                         height="1067" />
+                                </figure>
+                                <div class="gallery__data">
+                                    <figcaption class="gallery__title">Cerita Kita</figcaption>
+                                    <p class="gallery__description">
+                                        Setiap detik bersamamu seperti halaman indah yang tak ingin kulewatkan
+                                    </p>
+                                </div>
+                            </div>
 
-                  <!-- Foto 4 -->
-                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
-                      <figure class="gallery__image">
-                          <img src="images/foto4.jpg" 
-                               alt="Kebersamaan yang bermakna"
-                               loading="lazy"
-                               width="800"
-                               height="1067" />
-                      </figure>
-                      <div class="gallery__data">
-                          <figcaption class="gallery__title">Bahagia Sederhana</figcaption>
-                          <p class="gallery__description">
-                              Dalam senyummu, kutemukan alasan untuk mensyukuri setiap hari
-                          </p>
-                      </div>
-                  </div>
+                            <!-- Foto 4 -->
+                            <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                                <figure class="gallery__image">
+                                    <img src="images/foto4.jpg" 
+                                         alt="Kebersamaan yang bermakna"
+                                         loading="lazy"
+                                         width="800"
+                                         height="1067" />
+                                </figure>
+                                <div class="gallery__data">
+                                    <figcaption class="gallery__title">Bahagia Sederhana</figcaption>
+                                    <p class="gallery__description">
+                                        Dalam senyummu, kutemukan alasan untuk mensyukuri setiap hari
+                                    </p>
+                                </div>
+                            </div>
 
-                  <!-- Foto 5 -->
-                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
-                      <figure class="gallery__image">
-                          <img src="images/foto5.jpg" 
-                               alt="Momen yang tak terlupakan"
-                               loading="lazy"
-                               width="800"
-                               height="1067" />
-                      </figure>
-                      <div class="gallery__data">
-                          <figcaption class="gallery__title">Pelengkap Hidupku</figcaption>
-                          <p class="gallery__description">
-                              Bersamamu, setiap momen biasa menjadi kenangan yang tak terlupakan
-                          </p>
-                      </div>
-                  </div>
+                            <!-- Foto 5 -->
+                            <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                                <figure class="gallery__image">
+                                    <img src="images/foto5.jpg" 
+                                         alt="Momen yang tak terlupakan"
+                                         loading="lazy"
+                                         width="800"
+                                         height="1067" />
+                                </figure>
+                                <div class="gallery__data">
+                                    <figcaption class="gallery__title">Pelengkap Hidupku</figcaption>
+                                    <p class="gallery__description">
+                                        Bersamamu, setiap momen biasa menjadi kenangan yang tak terlupakan
+                                    </p>
+                                </div>
+                            </div>
 
-                  <!-- Foto 6 -->
-                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
-                      <figure class="gallery__image">
-                          <img src="images/foto6.jpg" 
-                               alt="Kisah cinta kita"
-                               loading="lazy"
-                               width="800"
-                               height="1067" />
-                      </figure>
-                      <div class="gallery__data">
-                          <figcaption class="gallery__title">Selamanya Denganmu</figcaption>
-                          <p class="gallery__description">
-                              Kamu adalah hadiah terindah yang Allah titipkan dalam hidupku
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-pagination"></div>
-          </div>
-      </div>
-  </div>
-</section>
+                            <!-- Foto 6 -->
+                            <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                                <figure class="gallery__image">
+                                    <img src="images/foto6.jpg" 
+                                         alt="Kisah cinta kita"
+                                         loading="lazy"
+                                         width="800"
+                                         height="1067" />
+                                </figure>
+                                <div class="gallery__data">
+                                    <figcaption class="gallery__title">Selamanya Denganmu</figcaption>
+                                    <p class="gallery__description">
+                                        Kamu adalah hadiah terindah yang Allah titipkan dalam hidupku
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Wishes Section -->
         <section class="wishes section" id="wishes">
@@ -285,7 +289,7 @@
                         <h3 class="wishes__title">Kebahagiaan</h3>
                         <p class="wishes__description">
                             Semoga setiap langkahmu dipenuhi kebahagiaan dan tawa.
-                            Kamu pantas mendapatkan semua hal indah dalam hidup kamu.
+                            Kamu pantas mendapatkan semua hal indah dalam hidup.
                         </p>
                     </div>
 
@@ -311,43 +315,58 @@
                         </p>
                     </div>
                 </div>
+              </div>
             </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer__container container">
-            <div class="footer__content">
-                <div class="footer__data">
-                    <h3 class="footer__title">
-                        <i class="fas fa-heart" aria-hidden="true"></i> Made with Love
-                    </h3>
-                    <p class="footer__description">
-                        Setiap detail website ini dibuat khusus untukmu
-                    </p>
-                </div>
-
-            <p class="footer__copy">
-                &#169; 2025. Aprido Ilham
-            </p>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <!-- Scroll Up Button -->
-    <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </a>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__content">
+            <div class="footer__data">
+                <h3 class="footer__title">
+                    <i class="fas fa-heart" aria-hidden="true"></i> Made with Love
+                </h3>
+                <p class="footer__description">
+                    Setiap detail website ini dibuat khusus untukmu
+                </p>
+            </div>
 
-    <!-- Audio Player -->
-    <audio id="bg-audio" preload="auto" loop>
-        <source src="audio/Hello You.mp3" type="audio/mpeg">
-        <source src="audio/Hello You.ogg" type="audio/ogg">
-    </audio>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js" defer></script>
-    <script src="script.js" defer></script>
+        <p class="footer__copy">
+            &#169; 2024. All rights reserved
+        </p>
+    </div>
+</footer>
+
+<!-- Scroll Up Button -->
+<a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</a>
+
+<!-- Audio Player -->
+<audio id="bg-audio" preload="auto" loop>
+    <source src="audio/your-song.mp3" type="audio/mpeg">
+    <source src="audio/your-song.ogg" type="audio/ogg">
+</audio>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>
