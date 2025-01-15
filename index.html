@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A special birthday celebration website" />
+    <title>Happy Birthday My Love! ♥</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" as="style" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div class="heart-loader"></div>
+        <p class="loading-text">Loading love...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                <i class="fas fa-heart" aria-hidden="true"></i>
+                <span class="logo-text">Happy Birthday!</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#story" class="nav__link">
+                            <i class="fas fa-book-open" aria-hidden="true"></i>
+                            <span>Story</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#gallery" class="nav__link">
+                            <i class="fas fa-images" aria-hidden="true"></i>
+                            <span>Gallery</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#wishes" class="nav__link">
+                            <i class="fas fa-gift" aria-hidden="true"></i>
+                            <span>Wishes</span>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="nav__close" id="nav-close" aria-label="Close menu">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section class="home" id="home">
+            <div class="home__container container">
+                <div class="home__content">
+                    <div class="home__data" data-aos="fade-up">
+                        <h1 class="home__title">
+                            Happy Birthday Ayu Kusuma Dewi
+                            <span class="gradient-text">My Love!</span>
+                        </h1>
+                        <p class="home__description">
+                            Setiap detak jantungku bernyanyi untuk merayakan hari spesialmu.
+                            Kamu adalah hadiah terindah dalam hidupku. ❤️
+                        </p>
+                        <div class="home__buttons">
+                            <a href="#story" class="button button--flex">
+                                <i class="fas fa-book button__icon" aria-hidden="true"></i>
+                                Our Story
+                            </a>
+                            <a href="#gallery" class="button button--ghost button--flex">
+                                <i class="fas fa-images button__icon" aria-hidden="true"></i>
+                                Gallery
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="floating-hearts" aria-hidden="true">
+                        <i class="fas fa-heart heart1" data-speed="0.8"></i>
+                        <i class="fas fa-heart heart2" data-speed="0.5"></i>
+                        <i class="fas fa-heart heart3" data-speed="0.3"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story section" id="story">
+            <div class="story__container container">
+                <div class="section__titles" data-aos="fade-down">
+                    <span class="section__subtitle">Our Journey</span>
+                    <h2 class="section__title">Kisah Cinta Kita</h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline__item" data-aos="fade-right">
+                        <div class="timeline__content">
+                            <time class="timeline__date">Pertama Bertemu</time>
+                            <h3 class="timeline__title">Awal Yang Indah</h3>
+                            <p class="timeline__description">
+                                Saat pertama kali mata kita bertemu, duniaku berubah seketika.
+                                Senyummu menghangatkan hatiku seperti mentari pagi.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline__item" data-aos="fade-left">
+                        <div class="timeline__content">
+                            <time class="timeline__date">First Date</time>
+                            <h3 class="timeline__title">Kencan Pertama</h3>
+                            <p class="timeline__description">
+                                Momen sederhana bersamamu terasa begitu istimewa.
+                                Setiap tawa dan obrolan kita masih terngiang hingga kini.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline__item" data-aos="fade-right">
+                        <div class="timeline__content">
+                            <time class="timeline__date">Sekarang</time>
+                            <h3 class="timeline__title">Cinta Yang Tumbuh</h3>
+                            <p class="timeline__description">
+                                Setiap hari bersamamu adalah anugerah.
+                                Cinta kita terus tumbuh dan menguat seiring waktu.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+<!-- Gallery Section -->
+<section class="gallery section" id="gallery">
+  <div class="gallery__container container">
+      <div class="section__titles" data-aos="fade-down">
+          <span class="section__subtitle">Memories</span>
+          <h2 class="section__title">Momen Indah Kita</h2>
+      </div>
+
+      <div class="gallery__content">
+          <div class="swiper gallery-swiper">
+              <div class="swiper-wrapper">
+                  <!-- Foto 1 -->
+                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                      <figure class="gallery__image">
+                          <img src="images/foto1.jpg" 
+                               alt="Pertemuan yang mengubah segalanya"
+                               loading="lazy"
+                               width="800"
+                               height="1067" />
+                      </figure>
+                      <div class="gallery__data">
+                          <figcaption class="gallery__title">Saat Hati Memilih</figcaption>
+                          <p class="gallery__description">
+                              Setiap pandangan mata menguatkan keyakinan bahwa kamu adalah jawaban dari doaku
+                          </p>
+                      </div>
+                  </div>
+
+                  <!-- Foto 2 -->
+                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                      <figure class="gallery__image">
+                          <img src="images/foto2.jpg" 
+                               alt="Kenangan manis kita"
+                               loading="lazy"
+                               width="800"
+                               height="1067" />
+                      </figure>
+                      <div class="gallery__data">
+                          <figcaption class="gallery__title">Indahnya Bersamamu</figcaption>
+                          <p class="gallery__description">
+                              Berjalan di sampingmu membuat setiap langkah terasa lebih berarti
+                          </p>
+                      </div>
+                  </div>
+
+                  <!-- Foto 3 -->
+                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                      <figure class="gallery__image">
+                          <img src="images/foto3.jpg" 
+                               alt="Momen penuh arti"
+                               loading="lazy"
+                               width="800"
+                               height="1067" />
+                      </figure>
+                      <div class="gallery__data">
+                          <figcaption class="gallery__title">Cerita Kita</figcaption>
+                          <p class="gallery__description">
+                              Setiap detik bersamamu seperti halaman indah yang tak ingin kulewatkan
+                          </p>
+                      </div>
+                  </div>
+
+                  <!-- Foto 4 -->
+                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                      <figure class="gallery__image">
+                          <img src="images/foto4.jpg" 
+                               alt="Kebersamaan yang bermakna"
+                               loading="lazy"
+                               width="800"
+                               height="1067" />
+                      </figure>
+                      <div class="gallery__data">
+                          <figcaption class="gallery__title">Bahagia Sederhana</figcaption>
+                          <p class="gallery__description">
+                              Dalam senyummu, kutemukan alasan untuk mensyukuri setiap hari
+                          </p>
+                      </div>
+                  </div>
+
+                  <!-- Foto 5 -->
+                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                      <figure class="gallery__image">
+                          <img src="images/foto5.jpg" 
+                               alt="Momen yang tak terlupakan"
+                               loading="lazy"
+                               width="800"
+                               height="1067" />
+                      </figure>
+                      <div class="gallery__data">
+                          <figcaption class="gallery__title">Pelengkap Hidupku</figcaption>
+                          <p class="gallery__description">
+                              Bersamamu, setiap momen biasa menjadi kenangan yang tak terlupakan
+                          </p>
+                      </div>
+                  </div>
+
+                  <!-- Foto 6 -->
+                  <div class="gallery__card swiper-slide" data-aos="zoom-in">
+                      <figure class="gallery__image">
+                          <img src="images/foto6.jpg" 
+                               alt="Kisah cinta kita"
+                               loading="lazy"
+                               width="800"
+                               height="1067" />
+                      </figure>
+                      <div class="gallery__data">
+                          <figcaption class="gallery__title">Selamanya Denganmu</figcaption>
+                          <p class="gallery__description">
+                              Kamu adalah hadiah terindah yang Allah titipkan dalam hidupku
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-pagination"></div>
+          </div>
+      </div>
+  </div>
+</section>
+
+        <!-- Wishes Section -->
+        <section class="wishes section" id="wishes">
+            <div class="wishes__container container">
+                <div class="section__titles" data-aos="fade-down">
+                    <span class="section__subtitle">Birthday</span>
+                    <h2 class="section__title">Harapan Untukmu</h2>
+                </div>
+
+                <div class="wishes__content grid">
+                    <div class="wishes__card" data-aos="flip-left">
+                        <div class="wishes__icon">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="wishes__title">Kebahagiaan</h3>
+                        <p class="wishes__description">
+                            Semoga setiap langkahmu dipenuhi kebahagiaan dan tawa.
+                            Kamu pantas mendapatkan semua hal indah dalam hidup kamu.
+                        </p>
+                    </div>
+
+                    <div class="wishes__card" data-aos="flip-up">
+                        <div class="wishes__icon">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="wishes__title">Cinta</h3>
+                        <p class="wishes__description">
+                            Cintaku padamu seperti bintang di langit - tak terhitung dan abadi.
+                            Semoga cinta kita terus bersinar selamanya.
+                        </p>
+                    </div>
+
+                    <div class="wishes__card" data-aos="flip-right">
+                        <div class="wishes__icon">
+                            <i class="fas fa-infinity" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="wishes__title">Masa Depan</h3>
+                        <p class="wishes__description">
+                            Bersamamu, aku melihat masa depan yang cerah.
+                            Mari kita ukir kisah indah bersama selamanya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div class="footer__data">
+                    <h3 class="footer__title">
+                        <i class="fas fa-heart" aria-hidden="true"></i> Made with Love
+                    </h3>
+                    <p class="footer__description">
+                        Setiap detail website ini dibuat khusus untukmu
+                    </p>
+                </div>
+
+            <p class="footer__copy">
+                &#169; 2025. Aprido Ilham
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll Up Button -->
+    <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <!-- Audio Player -->
+    <audio id="bg-audio" preload="auto" loop>
+        <source src="audio/Hello You.mp3" type="audio/mpeg">
+        <source src="audio/Hello You.ogg" type="audio/ogg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
